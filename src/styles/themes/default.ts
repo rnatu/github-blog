@@ -22,4 +22,4 @@ export const defaultTheme = {
     'text-text-s': '.875rem',
     'components-link': '.75rem',
   },
-} as const;
+};
