@@ -1,10 +1,6 @@
-import { LinkText, Title } from '../../../../components/Typography';
-import {
-  Avatar,
-  ProfileContainer,
-  UserInfoContainer,
-  UserInfoHeader,
-} from './styles';
+import { ExternalLink } from '../../../../components/ExternalLink';
+import { Title } from '../../../../components/Typography';
+import { Avatar, ProfileContainer, UserInfoContainer } from './styles';
 
 export function Profile() {
   return (
@@ -12,13 +8,11 @@ export function Profile() {
       <Avatar src="https://avatars.githubusercontent.com/u/40378126?v=4" />
 
       <UserInfoContainer>
-        <UserInfoHeader>
+        <header>
           <Title size="l">Cameron Williamson</Title>
 
-          <div>
-            <LinkText>GITHUB</LinkText>
-          </div>
-        </UserInfoHeader>
+          <ExternalLink text="GitHub" />
+        </header>
       </UserInfoContainer>
     </ProfileContainer>
   );

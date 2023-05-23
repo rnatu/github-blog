@@ -21,8 +21,3 @@ export const Text = styled.p<TextProps>`
     theme.textSizes[`text-text-${size ?? 'm'}`]};
   color: ${({ theme, color }) => theme.colors[`base-${color ?? 'text'}`]};
 `;
-
-export const LinkText = styled.span`
-  font-size: ${({ theme }) => theme.textSizes['components-link']};
-  color: ${({ theme }) => theme.colors['brand-blue']};
-`;
