@@ -1,4 +1,4 @@
-import { Home } from './Pages/Home';
+import { Blog } from './Pages/Blog';
 import { GlobalStyle } from './styles/global';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from './styles/themes/default';
@@ -8,7 +8,7 @@ function App() {
     <>
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyle />
-        <Home />
+        <Blog />
       </ThemeProvider>
     </>
   );
