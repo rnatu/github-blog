@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
 
   :focus {
     outline: 0;
-    box-shadow: 0 0 0 2px red;
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors['brand-blue']};
   }
 
   input::-webkit-outer-spin-button,
