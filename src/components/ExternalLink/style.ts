@@ -1,6 +1,10 @@
-import { styled } from 'styled-components';
+import { css, styled } from 'styled-components';
 
-export const ExternalLinkContainer = styled.a`
+interface ExternalLinkContainerProps {
+  iconLeft?: boolean;
+}
+
+export const ExternalLinkContainer = styled.a<ExternalLinkContainerProps>`
   font-size: ${({ theme }) => theme.textSizes['components-link']};
   color: ${({ theme }) => theme.colors['brand-blue']};
   text-transform: uppercase;
@@ -8,4 +12,10 @@ export const ExternalLinkContainer = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  ${({ iconLeft }) =>
+    iconLeft &&
+    css`
+      flex-direction: row-reverse;
+    `}
 `;

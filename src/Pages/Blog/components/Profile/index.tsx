@@ -1,3 +1,4 @@
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { ExternalLink } from '../../../../components/ExternalLink';
 import { Title } from '../../../../components/Typography';
 import { Avatar, ProfileContainer, UserInfoContainer } from './styles';
@@ -11,7 +12,7 @@ export function Profile() {
         <header>
           <Title size="l">Cameron Williamson</Title>
 
-          <ExternalLink text="GitHub" />
+          <ExternalLink text="GitHub" icon={faUpRightFromSquare} />
         </header>
       </UserInfoContainer>
     </ProfileContainer>
