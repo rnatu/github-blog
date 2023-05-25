@@ -10,4 +10,10 @@ export const PublicationsHeader = styled.header`
   justify-content: space-between;
 `;
 
-export const PostsContainer = styled.main``;
+export const PostsContainer = styled.main`
+  margin-top: 3rem;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(416px, 1fr));
+  grid-gap: 2rem;
+`;
