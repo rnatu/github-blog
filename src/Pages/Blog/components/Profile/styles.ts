@@ -8,6 +8,8 @@ export const ProfileContainer = styled.section`
   border-radius: 10px;
 
   background-color: ${({ theme }) => theme.colors['base-profile']};
+
+  margin: -84px auto 0;
 `;
 
 export const Avatar = styled.img`
@@ -39,5 +41,9 @@ export const Info = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
+    svg {
+      font-size: 1.125rem;
+    }
   }
 `;

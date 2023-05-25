@@ -1,11 +1,13 @@
 import {
-  faGamepad,
+  faBuilding,
   faUpRightFromSquare,
+  faUserGroup,
 } from '@fortawesome/free-solid-svg-icons';
 import { ExternalLink } from '../../../../components/ExternalLink';
 import { Text, Title } from '../../../../components/Typography';
 import { Avatar, ProfileContainer, DetailsContainer, Info } from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export function Profile() {
   return (
@@ -27,15 +29,15 @@ export function Profile() {
 
         <Info>
           <div>
-            <FontAwesomeIcon icon={faGamepad} />
+            <FontAwesomeIcon icon={faGithub} />
             <Text>cameronwll</Text>
           </div>
           <div>
-            <FontAwesomeIcon icon={faGamepad} />
+            <FontAwesomeIcon icon={faBuilding} />
             <Text>cameronwll</Text>
           </div>
           <div>
-            <FontAwesomeIcon icon={faGamepad} />
+            <FontAwesomeIcon icon={faUserGroup} />
             <Text>cameronwll</Text>
           </div>
         </Info>
