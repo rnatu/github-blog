@@ -9,3 +9,5 @@ export const PublicationsHeader = styled.header`
   display: flex;
   justify-content: space-between;
 `;
+
+export const PostsContainer = styled.main``;

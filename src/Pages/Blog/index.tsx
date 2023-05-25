@@ -1,8 +1,9 @@
 import { Header } from '../../components/Header';
 import { Text, Title } from '../../components/Typography';
+import { Post } from './components/Post';
 import { Profile } from './components/Profile';
 import { SearchInput } from './components/SearchInput';
-import { Publications, PublicationsHeader } from './styles';
+import { PostsContainer, Publications, PublicationsHeader } from './styles';
 
 export function Blog() {
   return (
@@ -22,11 +23,14 @@ export function Blog() {
 
         <SearchInput />
 
-        <div>
-          <h1>posts</h1>
-          <h1>posts</h1>
-          <h1>posts</h1>
-        </div>
+        <PostsContainer>
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+        </PostsContainer>
       </Publications>
     </>
   );
