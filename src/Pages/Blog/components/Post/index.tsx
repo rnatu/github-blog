@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Text, Title } from '../../../../components/Typography';
 import { PostContainer, PostDescription, PostHeader } from './styles';
 
