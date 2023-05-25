@@ -13,9 +13,15 @@ export const ExternalLinkContainer = styled.a<ExternalLinkContainerProps>`
   align-items: center;
   gap: 0.5rem;
 
+  text-decoration: none;
+
   ${({ iconLeft }) =>
     iconLeft &&
     css`
       flex-direction: row-reverse;
     `}
+
+  &:hover {
+    box-shadow: 0 1px 0 ${({ theme }) => theme.colors['brand-blue']};
+  }
 `;
