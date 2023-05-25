@@ -1,9 +1,9 @@
-import { HTMLProps } from 'react';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ExternalLinkContainer } from './style';
+import { AnchorHTMLAttributes } from 'react';
 
-interface ExternalLinkProps extends HTMLProps<HTMLAnchorElement> {
+interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
 }
 
