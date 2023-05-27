@@ -1,15 +1,15 @@
 import { styled } from 'styled-components';
 
 export const ProfileContainer = styled.section`
+  max-width: 54rem;
+  margin: -84px auto 0;
+
   display: flex;
   gap: 2rem;
   padding: 2rem;
-  max-width: 54rem;
   border-radius: 10px;
 
   background-color: ${({ theme }) => theme.colors['base-profile']};
-
-  margin: -84px auto 0;
 `;
 
 export const Avatar = styled.img`
