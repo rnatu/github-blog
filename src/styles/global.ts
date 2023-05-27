@@ -48,15 +48,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 0.4rem;
+    width: .45rem;
   }
 
   ::-webkit-scrollbar-track {
-    background: red
+    background: ${({ theme }) => theme.colors['base-border']};;
   }
   
   ::-webkit-scrollbar-thumb {
     border-radius: 2rem;
-    background: red
+    background: ${({ theme }) => theme.colors['brand-blue']};
   }
 `;
