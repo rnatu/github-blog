@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 export const ProfileContainer = styled.section`
   max-width: 54rem;
-  margin: -84px auto 0;
+  margin: -5.25rem auto 0;
 
   display: flex;
   gap: 2rem;
@@ -32,7 +32,7 @@ export const DetailsContainer = styled.div`
   }
 `;
 
-export const Info = styled.div`
+export const InfoContainer = styled.div`
   display: flex;
   gap: 1.5rem;
   margin-top: 1.5rem;

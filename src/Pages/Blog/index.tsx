@@ -1,4 +1,3 @@
-import { Header } from '../../components/Header';
 import { Text, Title } from '../../components/Typography';
 import { Post } from './components/Post';
 import { Profile } from './components/Profile';
@@ -8,8 +7,6 @@ import { BlogContainer, PostsContainer, PublicationsHeader } from './styles';
 export function Blog() {
   return (
     <>
-      <Header />
-
       <BlogContainer>
         <Profile />
 

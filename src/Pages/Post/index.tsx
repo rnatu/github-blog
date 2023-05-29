@@ -1,5 +1,9 @@
-import { Title } from '../../components/Typography';
+import { PostInfo } from './components/PostInfo';
 
 export function Post() {
-  return <Title>Post Page</Title>;
+  return (
+    <>
+      <PostInfo />
+    </>
+  );
 }

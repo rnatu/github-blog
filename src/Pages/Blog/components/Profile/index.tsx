@@ -5,7 +5,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { ExternalLink } from '../../../../components/ExternalLink';
 import { Text, Title } from '../../../../components/Typography';
-import { Avatar, ProfileContainer, DetailsContainer, Info } from './styles';
+import {
+  Avatar,
+  ProfileContainer,
+  DetailsContainer,
+  InfoContainer,
+} from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -27,7 +32,7 @@ export function Profile() {
           pulvinar vel mass.
         </Text>
 
-        <Info>
+        <InfoContainer>
           <div>
             <FontAwesomeIcon icon={faGithub} />
             <Text>cameronwll</Text>
@@ -40,7 +45,7 @@ export function Profile() {
             <FontAwesomeIcon icon={faUserGroup} />
             <Text>cameronwll</Text>
           </div>
-        </Info>
+        </InfoContainer>
       </DetailsContainer>
     </ProfileContainer>
   );
