@@ -14,7 +14,7 @@ export const PublicationsHeader = styled.header`
 `;
 
 export const PostsContainer = styled.section`
-  margin-top: 3rem;
+  margin: 3rem 0;
   display: grid;
 
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
