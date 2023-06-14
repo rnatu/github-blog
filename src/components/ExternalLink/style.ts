@@ -1,7 +1,7 @@
 import { css, styled } from 'styled-components';
 
 interface ExternalLinkContainerProps {
-  iconLeft?: boolean;
+  variant?: string;
 }
 
 export const ExternalLinkContainer = styled.a<ExternalLinkContainerProps>`
@@ -15,8 +15,8 @@ export const ExternalLinkContainer = styled.a<ExternalLinkContainerProps>`
 
   text-decoration: none;
 
-  ${({ iconLeft }) =>
-    iconLeft &&
+  ${({ variant }) =>
+    variant &&
     css`
       flex-direction: row-reverse;
     `}

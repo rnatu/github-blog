@@ -1,5 +1,8 @@
+/* eslint-disable react/no-children-prop */
 import ReactMarkdown from 'react-markdown';
 import { PostContentContainer } from './style';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const markdown = `
 <h1 align="center">
@@ -112,7 +115,27 @@ Code formatter:
 export function PostContent() {
   return (
     <PostContentContainer>
-      <ReactMarkdown>{markdown}</ReactMarkdown>
+      <ReactMarkdown
+        children={markdown}
+        components={{
+          code({ node, inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || '');
+            return !inline && match ? (
+              <SyntaxHighlighter
+                children={String(children).replace(/\n$/, '')}
+                style={dracula as any}
+                language={match[1]}
+                PreTag="div"
+                {...props}
+              />
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          },
+        }}
+      />
     </PostContentContainer>
   );
 }

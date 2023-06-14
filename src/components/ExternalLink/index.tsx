@@ -6,12 +6,19 @@ import { AnchorHTMLAttributes } from 'react';
 interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
   icon: IconDefinition;
-  iconLeft?: boolean;
+  variant?: boolean;
 }
 
-export function ExternalLink({ text, icon, ...rest }: ExternalLinkProps) {
+export function ExternalLink({
+  text,
+  icon,
+  variant = false,
+  ...rest
+}: ExternalLinkProps) {
+  const variantClass = variant ? 'iconLeft' : '';
+
   return (
-    <ExternalLinkContainer {...rest}>
+    <ExternalLinkContainer variant={variantClass} {...rest}>
       {text}
       <FontAwesomeIcon icon={icon} />
     </ExternalLinkContainer>

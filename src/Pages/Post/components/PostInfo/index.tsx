@@ -14,7 +14,7 @@ export function PostInfo() {
   return (
     <PostInfoContainer>
       <LinksContainer>
-        <ExternalLink icon={faChevronLeft} href="/" text="Voltar" iconLeft />
+        <ExternalLink icon={faChevronLeft} href="/" text="Voltar" variant />
         <ExternalLink href="/" text="GitHub" icon={faUpRightFromSquare} />
       </LinksContainer>
 
