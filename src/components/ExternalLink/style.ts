@@ -8,6 +8,7 @@ export const ExternalLinkContainer = styled.a<ExternalLinkContainerProps>`
   font-size: ${({ theme }) => theme.textSizes['components-link']};
   color: ${({ theme }) => theme.colors['brand-blue']};
   text-transform: uppercase;
+  line-height: 1.2rem;
 
   display: flex;
   align-items: center;
@@ -22,6 +23,6 @@ export const ExternalLinkContainer = styled.a<ExternalLinkContainerProps>`
     `}
 
   &:hover {
-    box-shadow: 0 1px 0 ${({ theme }) => theme.colors['brand-blue']};
+    box-shadow: 0 2px 0 ${({ theme }) => theme.colors['brand-blue']};
   }
 `;
