@@ -2,11 +2,12 @@
 import ReactMarkdown from 'react-markdown';
 import { PostContentContainer } from './style';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import rehypeRaw from 'rehype-raw';
 
 const markdown = `
 <h1 align="center">
-<img alig src="./src/assets/intro-imagem.svg" width=500 alt="Coffee Delivery Logo">
+<img alig src="https://github.com/rnatu/coffee-delivery/raw/main/src/assets/intro-imagem.svg" width=500 alt="Coffee Delivery Logo">
 </h1>
 
 <h3 align="center">
@@ -43,7 +44,7 @@ Desenvolvi uma aplicação para gerenciar um carrinho de compras de uma cafeteri
 O principal objetivo desta aplicação é gerenciar um carrinho de compras, criando a interface através de um layout previamente construído, buscando deixar o mais próximo possível e funcional.
 
 <p align="center">
-  <img alig src="./public/demonstration.png" width=450 alt="Coffee Delivery Logo">
+  <img alig src="#" width=450 alt="Coffee Delivery Logo">
 </p>
 
 ### Principais funcionalidades implementadas
@@ -92,6 +93,12 @@ Code formatter:
 
 ### Instalando Dependências
 
+\`\`\`javascript
+let foo = 42;   // foo is now a number
+foo = ‘bar’;    // foo is now a string
+foo = true;     // foo is now a boolean
+\`\`\`
+
 
 \`\`\`bash
     # Instalar as dependências
@@ -116,6 +123,7 @@ export function PostContent() {
   return (
     <PostContentContainer>
       <ReactMarkdown
+        rehypePlugins={[rehypeRaw]}
         children={markdown}
         components={{
           code({ node, inline, className, children, ...props }) {
@@ -123,7 +131,7 @@ export function PostContent() {
             return !inline && match ? (
               <SyntaxHighlighter
                 children={String(children).replace(/\n$/, '')}
-                style={dracula as any}
+                style={vscDarkPlus as any}
                 language={match[1]}
                 PreTag="div"
                 {...props}
