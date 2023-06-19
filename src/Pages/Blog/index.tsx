@@ -5,10 +5,12 @@ import { SearchInput } from './components/SearchInput';
 import { BlogContainer, PostsContainer, PublicationsHeader } from './styles';
 
 export function Blog() {
+  const githubUserName = 'rnatu';
+
   return (
     <>
       <BlogContainer>
-        <Profile />
+        <Profile githubUserName={githubUserName} />
 
         <PublicationsHeader>
           <Title size="s" color="subtitle">
