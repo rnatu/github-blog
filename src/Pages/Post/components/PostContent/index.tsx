@@ -120,6 +120,7 @@ foo = true;     // foo is now a boolean
 `;
 
 export function PostContent() {
+  // Renderiza o conteúdo markdown usando ReactMarkdown e SyntaxHighlighter
   return (
     <PostContentContainer>
       <ReactMarkdown
@@ -127,8 +128,10 @@ export function PostContent() {
         children={markdown}
         components={{
           code({ node, inline, className, children, ...props }) {
+            // Verifica se o código deve ser destacado
             const match = /language-(\w+)/.exec(className || '');
             return !inline && match ? (
+              // Renderiza o código com SyntaxHighlighter
               <SyntaxHighlighter
                 children={String(children).replace(/\n$/, '')}
                 style={vscDarkPlus as any}
@@ -137,6 +140,7 @@ export function PostContent() {
                 {...props}
               />
             ) : (
+              // Renderiza o código inline
               <code className={className} {...props}>
                 {children}
               </code>
