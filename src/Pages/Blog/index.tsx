@@ -57,7 +57,7 @@ export function Blog() {
 
         <PostsContainer>
           {postData.map((post: PostData) => (
-            <Post key={post.id} />
+            <Post key={post.id} title={post.title} description={post.body} />
           ))}
         </PostsContainer>
       </BlogContainer>

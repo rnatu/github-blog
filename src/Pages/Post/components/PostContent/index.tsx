@@ -1,9 +1,10 @@
 /* eslint-disable react/no-children-prop */
 import ReactMarkdown from 'react-markdown';
-import { PostContentContainer } from './style';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import rehypeRaw from 'rehype-raw';
+
+import { PostContentContainer } from './style';
 
 const markdown = `
 <h1 align="center">
