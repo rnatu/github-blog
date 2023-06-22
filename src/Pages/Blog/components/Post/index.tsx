@@ -10,7 +10,7 @@ interface PostProps {
 
 export function Post({ title, description }: PostProps) {
   return (
-    <PostContainer>
+    <PostContainer onClick={(e) => console.log('oi')}>
       <PostHeader>
         <Title>{title}</Title>
 
