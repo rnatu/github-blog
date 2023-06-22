@@ -20,9 +20,7 @@ export function Post({ title, description }: PostProps) {
       </PostHeader>
 
       <PostDescription>
-        <Text>
-          <ReactMarkdown>{description}</ReactMarkdown>
-        </Text>
+        <ReactMarkdown>{description}</ReactMarkdown>
       </PostDescription>
     </PostContainer>
   );

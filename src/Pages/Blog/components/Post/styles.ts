@@ -11,8 +11,9 @@ export const PostHeader = styled.header`
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  height: 4rem;
 
-  > h1 {
+  h1 {
     flex: 1;
 
     overflow: hidden;
@@ -24,13 +25,16 @@ export const PostHeader = styled.header`
 `;
 
 export const PostDescription = styled.div`
-  > p {
-    margin-top: 1.25rem;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+  * {
+    font-size: 1rem;
+    font-weight: 300;
   }
+
+  margin-top: 1.25rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 `;
