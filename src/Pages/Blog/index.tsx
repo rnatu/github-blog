@@ -8,13 +8,14 @@ import { api } from '../../lib/axios';
 
 interface PostData {
   id: number;
+  number: number;
   repository_url: string;
   title: string;
   body: string;
 }
 
 export function Blog() {
-  const githubUserName = 'rnatu';
+  const githubUserName = import.meta.env.VITE_GITHUB_USERNAME;
   const [postData, setPostData] = useState<PostData[]>([]);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export function Blog() {
     }
 
     getPosts();
-  }, []);
+  }, [githubUserName]);
 
   return (
     <>
@@ -57,7 +58,12 @@ export function Blog() {
 
         <PostsContainer>
           {postData.map((post: PostData) => (
-            <Post key={post.id} title={post.title} description={post.body} />
+            <Post
+              key={post.id}
+              title={post.title}
+              description={post.body}
+              postNumber={post.number}
+            />
           ))}
         </PostsContainer>
       </BlogContainer>

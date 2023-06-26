@@ -2,15 +2,19 @@ import { Text, Title } from '../../../../components/Typography';
 import ReactMarkdown from 'react-markdown';
 
 import { PostContainer, PostDescription, PostHeader } from './styles';
+import { useNavigate } from 'react-router-dom';
 
 interface PostProps {
   title: string;
   description: string;
+  postNumber: number;
 }
 
-export function Post({ title, description }: PostProps) {
+export function Post({ title, description, postNumber }: PostProps) {
+  const navigate = useNavigate();
+
   return (
-    <PostContainer onClick={(e) => console.log('oi')}>
+    <PostContainer onClick={() => navigate(`/post/${postNumber}`)}>
       <PostHeader>
         <Title>{title}</Title>
 
@@ -20,6 +24,7 @@ export function Post({ title, description }: PostProps) {
       </PostHeader>
 
       <PostDescription>
+        {/* Renderiza o conteúdo markdown usando ReactMarkdown */}
         <ReactMarkdown>{description}</ReactMarkdown>
       </PostDescription>
     </PostContainer>

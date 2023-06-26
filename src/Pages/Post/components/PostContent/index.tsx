@@ -121,7 +121,7 @@ foo = true;     // foo is now a boolean
 `;
 
 export function PostContent() {
-  // Renderiza o conteúdo markdown usando ReactMarkdown e SyntaxHighlighter
+  // Renderiza o conteúdo markdown usando ReactMarkdown e estiliza conteúdo em códigos de programação com o SyntaxHighlighter
   return (
     <PostContentContainer>
       <ReactMarkdown
