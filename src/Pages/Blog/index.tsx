@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Text, Title } from '../../components/Typography';
+
+import { Post } from './components/Post';
 import { Profile } from './components/Profile';
 import { SearchInput } from './components/SearchInput';
 import { BlogContainer, PostsContainer, PublicationsHeader } from './styles';
-import { api } from '../../lib/axios';
+import { Text, Title } from '../../components/Typography';
 import { PostData } from '../../interfaces/PostData';
-import { Post } from './components/Post';
+import { api } from '../../lib/axios';
 
 export function Blog() {
   const githubUserName = import.meta.env.VITE_GITHUB_USERNAME;

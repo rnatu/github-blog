@@ -1,14 +1,15 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
   faCalendarDay,
   faChevronLeft,
   faComment,
   faUpRightFromSquare,
 } from '@fortawesome/free-solid-svg-icons';
-import { ExternalLink } from '../../../../components/ExternalLink';
-import { InfoContainer, LinksContainer, PostInfoContainer } from './styles';
-import { Text, Title } from '../../../../components/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+import { InfoContainer, LinksContainer, PostInfoContainer } from './styles';
+import { ExternalLink } from '../../../../components/ExternalLink';
+import { Text, Title } from '../../../../components/Typography';
 
 export function PostInfo() {
   return (

@@ -1,19 +1,20 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
   faBuilding,
   faUpRightFromSquare,
   faUserGroup,
 } from '@fortawesome/free-solid-svg-icons';
-import { ExternalLink } from '../../../../components/ExternalLink';
-import { Text, Title } from '../../../../components/Typography';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
+
 import {
   Avatar,
   ProfileContainer,
   DetailsContainer,
   InfoContainer,
 } from './styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { useEffect, useState } from 'react';
+import { ExternalLink } from '../../../../components/ExternalLink';
+import { Text, Title } from '../../../../components/Typography';
 import { api } from '../../../../lib/axios';
 
 interface ProfileProps {

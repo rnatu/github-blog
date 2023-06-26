@@ -1,8 +1,8 @@
-import { Text, Title } from '../../../../components/Typography';
 import ReactMarkdown from 'react-markdown';
+import { useNavigate } from 'react-router-dom';
 
 import { PostContainer, PostDescription, PostHeader } from './styles';
-import { useNavigate } from 'react-router-dom';
+import { Text, Title } from '../../../../components/Typography';
 
 interface PostProps {
   title: string;

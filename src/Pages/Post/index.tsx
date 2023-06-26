@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { PostContent } from './components/PostContent';
 import { PostInfo } from './components/PostInfo';
-import { useEffect, useState } from 'react';
-import { api } from '../../lib/axios';
 import { PostData } from '../../interfaces/PostData';
+import { api } from '../../lib/axios';
 
 export function Post() {
   const { postNumber } = useParams();
