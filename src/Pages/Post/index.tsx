@@ -24,8 +24,19 @@ export function Post() {
 
   return (
     <>
-      <PostInfo />
-      <PostContent />
+      {post ? (
+        <>
+          <PostInfo
+            repository_url={post?.repository_url}
+            title={post.title}
+            comments={post.comments}
+            created_at={post.created_at}
+          />
+          <PostContent />
+        </>
+      ) : (
+        <h1>Not Found</h1>
+      )}
     </>
   );
 }

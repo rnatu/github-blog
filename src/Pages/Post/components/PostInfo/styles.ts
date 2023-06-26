@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import styled from 'styled-components';
 
 export const PostInfoContainer = styled.header`
   max-width: 54rem;

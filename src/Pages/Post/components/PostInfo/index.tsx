@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
   faCalendarDay,
@@ -10,25 +11,42 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { InfoContainer, LinksContainer, PostInfoContainer } from './styles';
 import { ExternalLink } from '../../../../components/ExternalLink';
 import { Text, Title } from '../../../../components/Typography';
+import { dateFormatter } from '../../../../utils/dateFormatter';
 
-export function PostInfo() {
+interface PostInfoProps {
+  repository_url: string;
+  title: string;
+  created_at: string;
+  comments: number;
+}
+
+export function PostInfo({
+  repository_url,
+  title,
+  created_at,
+  comments,
+}: PostInfoProps) {
   return (
     <PostInfoContainer>
       <LinksContainer>
         <ExternalLink icon={faChevronLeft} href="/" text="Voltar" variant />
-        <ExternalLink href="/" text="GitHub" icon={faUpRightFromSquare} />
+        <ExternalLink
+          href={repository_url}
+          text="GitHub"
+          icon={faUpRightFromSquare}
+        />
       </LinksContainer>
 
-      <Title size="l">JavaScript data types and data structures</Title>
+      <Title size="l">{title}</Title>
 
       <InfoContainer>
         <div>
           <FontAwesomeIcon icon={faGithub} />
-          <Text>cameronwll</Text>
+          <Text>{import.meta.env.VITE_GITHUB_USERNAME}</Text>
         </div>
         <div>
           <FontAwesomeIcon icon={faCalendarDay} />
-          <Text>Há 1 dia</Text>
+          <Text>{dateFormatter(created_at)}</Text>
         </div>
         <div>
           <FontAwesomeIcon icon={faComment} />
