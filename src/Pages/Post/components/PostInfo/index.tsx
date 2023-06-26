@@ -50,7 +50,9 @@ export function PostInfo({
         </div>
         <div>
           <FontAwesomeIcon icon={faComment} />
-          <Text>5 comentários</Text>
+          <Text>
+            {comments} {comments === 1 ? 'comentário' : 'comentários'}
+          </Text>
         </div>
       </InfoContainer>
     </PostInfoContainer>
