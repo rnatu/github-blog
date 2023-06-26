@@ -14,14 +14,14 @@ import { Text, Title } from '../../../../components/Typography';
 import { dateFormatter } from '../../../../utils/dateFormatter';
 
 interface PostInfoProps {
-  repository_url: string;
+  html_url: string;
   title: string;
   created_at: string;
   comments: number;
 }
 
 export function PostInfo({
-  repository_url,
+  html_url,
   title,
   created_at,
   comments,
@@ -31,7 +31,7 @@ export function PostInfo({
       <LinksContainer>
         <ExternalLink icon={faChevronLeft} href="/" text="Voltar" variant />
         <ExternalLink
-          href={repository_url}
+          href={html_url}
           text="GitHub"
           icon={faUpRightFromSquare}
         />

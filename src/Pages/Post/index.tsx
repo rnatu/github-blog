@@ -27,7 +27,7 @@ export function Post() {
       {post ? (
         <>
           <PostInfo
-            repository_url={post?.repository_url}
+            html_url={post?.html_url}
             title={post.title}
             comments={post.comments}
             created_at={post.created_at}
