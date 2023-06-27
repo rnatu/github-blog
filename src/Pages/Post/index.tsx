@@ -32,7 +32,7 @@ export function Post() {
             comments={post.comments}
             created_at={post.created_at}
           />
-          <PostContent />
+          <PostContent content={post.body} />
         </>
       ) : (
         <h1>Not Found</h1>
