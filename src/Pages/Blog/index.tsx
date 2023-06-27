@@ -44,7 +44,7 @@ export function Blog() {
             Publicações
           </Title>
           <Text size="s" color="span">
-            {6} publicações
+            {postData.length} publicações
           </Text>
         </PublicationsHeader>
 
