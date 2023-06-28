@@ -52,7 +52,6 @@ export function Blog() {
       )
     : [];
 
-  console.log(filteredPosts);
   return (
     <>
       {loading ? (
