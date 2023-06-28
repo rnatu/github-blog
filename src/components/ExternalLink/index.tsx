@@ -1,7 +1,8 @@
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ExternalLinkContainer } from './style';
 import { AnchorHTMLAttributes } from 'react';
+
+import { ExternalLinkContainer } from './style';
 
 interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
