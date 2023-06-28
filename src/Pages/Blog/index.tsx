@@ -14,6 +14,7 @@ export function Blog() {
   const githubUserName = import.meta.env.VITE_GITHUB_USERNAME;
   const [postData, setPostData] = useState<PostData[]>();
   const [loading, setLoading] = useState(false);
+  const [handleSearchInput, setHandleSearchInput] = useState('');
 
   useEffect(() => {
     async function getPosts() {
@@ -45,6 +46,13 @@ export function Blog() {
     getPosts();
   }, [githubUserName]);
 
+  const filteredPosts = postData
+    ? postData?.filter((post) =>
+        post.title.toLowerCase().includes(handleSearchInput.toLowerCase()),
+      )
+    : [];
+
+  console.log(filteredPosts);
   return (
     <>
       {loading ? (
@@ -58,14 +66,17 @@ export function Blog() {
               Publicações
             </Title>
             <Text size="s" color="span">
-              {postData.length} publicações
+              {filteredPosts.length} publicações
             </Text>
           </PublicationsHeader>
 
-          <SearchInput />
+          <SearchInput
+            onChange={(e) => setHandleSearchInput(e.target.value)}
+            value={handleSearchInput}
+          />
 
           <PostsContainer>
-            {postData.map((post: PostData) => (
+            {filteredPosts.map((post: PostData) => (
               <Post
                 key={post.id}
                 title={post.title}

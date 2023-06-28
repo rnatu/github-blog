@@ -1,5 +1,15 @@
+import { InputHTMLAttributes } from 'react';
+
 import { SearchInputContainer } from './styles';
 
-export function SearchInput() {
-  return <SearchInputContainer type="search" placeholder="Buscar conteúdo" />;
+interface SearchInputProps extends InputHTMLAttributes<HTMLInputElement> {}
+
+export function SearchInput({ ...rest }: SearchInputProps) {
+  return (
+    <SearchInputContainer
+      type="search"
+      placeholder="Buscar conteúdo"
+      {...rest}
+    />
+  );
 }
