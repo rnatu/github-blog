@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const NotFound = styled.div`
+export const NotFoundContainer = styled.section`
   display: flex;
   flex-direction: column;
 

@@ -3,10 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import { PostContent } from './components/PostContent';
 import { PostInfo } from './components/PostInfo';
-import { NotFound } from './styles';
-import notFound from '../../assets/not-found.png';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
-import { Title } from '../../components/Typography';
+import { NotFound } from '../../components/NotFound';
 import { PostData } from '../../interfaces/PostData';
 import { api } from '../../lib/axios';
 
@@ -18,19 +16,18 @@ export function Post() {
   useEffect(() => {
     async function getPost() {
       setLoading(true);
-      setTimeout(async () => {
-        try {
-          const { data } = await api.get(
-            `/repos/rnatu/github-blog/issues/${postNumber}`,
-          );
 
-          setPost(data);
-        } catch (error) {
-          console.log(error);
-        } finally {
-          setLoading(false);
-        }
-      }, 1000);
+      try {
+        const { data } = await api.get(
+          `/repos/rnatu/github-blog/issues/${postNumber}`,
+        );
+
+        setPost(data);
+      } catch (error) {
+        alert(error);
+      } finally {
+        setLoading(false);
+      }
     }
 
     getPost();
@@ -42,15 +39,16 @@ export function Post() {
         <LoadingSpinner />
       ) : post ? (
         <>
-          <PostInfo postData={post} />
+          <PostInfo
+            html_url={post.html_url}
+            title={post.title}
+            created_at={post.created_at}
+            comments={post.comments}
+          />
           <PostContent content={post.body} />
         </>
       ) : (
-        <NotFound>
-          <Title size="l">Ops... Algo deu errado</Title>
-          <Title>Tente novamente mais tarde</Title>
-          <img src={notFound} alt="" />
-        </NotFound>
+        <NotFound />
       )}
     </>
   );
