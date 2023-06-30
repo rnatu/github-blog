@@ -24,8 +24,8 @@ Desenvolvi uma aplicação que faz uso da API do Github para criar um blog pess
 
 <h3 align="center">
   Acesse a aplicação pelo link abaixo<br />
-   <a href="https://exquisite-stroopwafel-262dd1.netlify.app" style="font-size: 1.25rem;">
-    https://exquisite-stroopwafel-262dd1.netlify.app
+   <a href="https://snazzy-macaron-beb63c.netlify.app" style="font-size: 1.25rem;">
+    https://snazzy-macaron-beb63c.netlify.app
   </a>
 </h3>
 
