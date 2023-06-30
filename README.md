@@ -1,9 +1,9 @@
 <h1 align="center">
-<img alig src="./src/assets/intro-imagem.svg" width=500 alt="Coffee Delivery Logo">
+<img alig src="./src/assets/logo.svg" width=300 alt="Github Blog">
 </h1>
 
 <h3 align="center">
-  Criando uma cafeteria fictícia com ReactJS/Typescript
+  Criando um blog pessoal com ReactJS/Typescript
 </h3>
 
 <p align="center">
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-Desenvolvi uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia do zero, utilizando ReactJS e TypeScript como base.
+Desenvolvi uma aplicação que faz uso da API do Github para criar um blog pessoal do zero, utilizando ReactJS e TypeScript como base.
 </p>
 
 <p align="center">
@@ -24,62 +24,56 @@ Desenvolvi uma aplicação para gerenciar um carrinho de compras de uma cafet
 
 <h3 align="center">
   Acesse a aplicação pelo link abaixo<br />
-   <font size="4">
-   <a  href="https://exquisite-stroopwafel-262dd1.netlify.app">
-  https://exquisite-stroopwafel-262dd1.netlify.app
+   <a href="https://exquisite-stroopwafel-262dd1.netlify.app" style="font-size: 1.25rem;">
+    https://exquisite-stroopwafel-262dd1.netlify.app
   </a>
-  </font>
 </h3>
 
 ## 📜 Sobre o projeto
 
-O principal objetivo desta aplicação é gerenciar um carrinho de compras, criando a interface através de um layout previamente construído, buscando deixar o mais próximo possível e funcional.
+O principal objetivo desta aplicação é utilizar a API do GitHub para buscar issues de um repositório específico e exibi-las como posts na página inicial do blog. Além disso, os dados do meu perfil serão integrados ao blog para compor a página inicial.
 
 <p align="center">
-  <img alig src="./public/demonstration.png" width=450 alt="Coffee Delivery Logo">
+  <img alig src="./public/demonstration.png" width=450 alt="Github Blog demonstration">
 </p>
 
 ### Principais funcionalidades implementadas
 
-- Listagem de produtos (cafés) disponíveis para compra
-- Adicionar uma quantidade específicas de itens no carrinho
-- Aumentar ou remover a quantidade de itens no carrinho
-- Formulário para o usuário preencher o seu endereço
-- Exibir o total de itens no carrinho no Header
-- Exibir o valor total da soma de itens no carrinho multiplicados pelo valor
+- Listagem do seu perfil com imagem, número de seguidores, nome e outras informações disponíveis pela API do GitHub.
+- Listar e filtrar todas as issues do repositório com um pequeno resumo do conteúdo dela
+- Criar uma página para exibir um post (issue) completo
 
 #### Funcionalidades Adicionais
 
-- Filtro de cafés por tag
-- Validação para exibição de rotas
+- Busca de issues pelo titulo
+- Contagem de posts integrado com a busca
+- Componente Not Found
 
 #### Conceitos
 
 - Estados
-- ContextAPI
-- Reducer
-- LocalStorage
 - Imutabilidade do estado
 - Listas e chaves no ReactJS
 - Propriedades
 - Componentização
+- Fetch / Axios
+- Roteamento e React Router DOM
+- Formulários
 
 ## 🚀 Tecnologias utilizadas
 
 - [ReactJS](https://pt-br.reactjs.org/)
   - [styled-components](https://styled-components.com/)
-  - [phosphor-icons](https://phosphoricons.com/)
-  - [immer](https://immerjs.github.io/immer/)
-  - [React Hook Form](https://react-hook-form.com/)
-  - [zod Validations](https://zod.dev/)
+  - [fortawesome-icons](https://fontawesome.com/icons)
+  - [moment](https://momentjs.com/)
+  - [react-markdown](https://github.com/remarkjs/react-markdown) + [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter) + [rehype-raw](https://github.com/rehypejs/rehype-raw)
   - [react-router-dom](https://reactrouter.com/en/main)
-  - [uuid](https://github.com/uuidjs/uuid)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 
 Code formatter:
 
-- [esLint](https://eslint.org/)
+- [esLintRocketseat with prettier](https://github.com/Rocketseat/eslint-config-rocketseat)
 
 ## ⚡ Como utilizar
 
@@ -96,7 +90,7 @@ Code formatter:
     # Iniciando aplicação
     $ npm run dev
 
-    # A aplicação será aberta na porta:3000 - Basta acessar: http://localhost:5173/
+    # A aplicação será aberta na porta:5173 - Basta acessar: http://localhost:5173/
 ```
 
 <h4 align="center">
