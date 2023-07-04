@@ -34,7 +34,7 @@ Desenvolvi uma aplicação que faz uso da API do Github para criar um blog pess
 O principal objetivo desta aplicação é utilizar a API do GitHub para buscar issues de um repositório específico e exibi-las como posts na página inicial do blog. Além disso, os dados do meu perfil serão integrados ao blog para compor a página inicial.
 
 <p align="center">
-  <img alig src="./public/demonstration.png" width=450 alt="Github Blog demonstration">
+  <img alig src="./src/assets/github-blog-demonstration.gif" width=450 alt="Github Blog demonstration">
 </p>
 
 ### Principais funcionalidades implementadas
